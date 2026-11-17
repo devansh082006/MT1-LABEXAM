@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Management - Info</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background: #f4f6f8; color: #222; }
+    .card { max-width: 640px; margin: auto; background: #fff; padding: 24px 32px;
+            border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    h1 { color: #1a5276; }
+    li { margin: 6px 0; }
+    a { color: #1a5276; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Vehicle Management - Static Info Page</h1>
+    <p>This page is served as a static file using the Node.js <code>fs</code> module
+       (<code>fs.readFile()</code>) from <code>public/info.html</code>.</p>
+    <h3>Technologies Used</h3>
+    <ul>
+      <li>Node.js HTTP module (Part A, port 3000)</li>
+      <li>Node.js FS module</li>
+      <li>Express.js REST API (Part B, port 4000)</li>
+    </ul>
+    <h3>Available Routes</h3>
+    <ul>
+      <li><a href="/">/</a> - Welcome page</li>
+      <li><a href="/vehicles">/vehicles</a> - All vehicles (JSON)</li>
+      <li><a href="/about">/about</a> - About the application</li>
+      <li><a href="/info">/info</a> - This page</li>
+    </ul>
+  </div>
+</body>
+</html>
