@@ -30,3 +30,53 @@ MT1-LABEXAM/
 |   `-- info.html
 `-- screenshots/
 ```
+
+## Part A Routes (http://localhost:3000)
+
+| Method | Route | Response |
+|--------|-------|----------|
+| GET | `/` | Welcome page (HTML) |
+| GET | `/vehicles` | All vehicles (JSON) |
+| GET | `/about` | Application information (JSON) |
+| GET | `/info` | `public/info.html` served with `fs.readFile()` (500 if unreadable) |
+| POST | `/add-vehicle` | Adds a vehicle (201), 400 for invalid JSON / missing fields |
+| any | other | 404 |
+
+## Part B API (http://localhost:4000)
+
+| Method | Endpoint | Functionality | Status codes |
+|--------|----------|---------------|--------------|
+| GET | `/vehicles` | Retrieve all vehicles | 200 |
+| GET | `/vehicles/:id` | Retrieve vehicle by ID | 200, 404 |
+| POST | `/vehicles` | Add a new vehicle | 201, 400 |
+| PUT | `/vehicles/:id` | Update vehicle details | 200, 400, 404 |
+| DELETE | `/vehicles/:id` | Delete a vehicle | 200, 404 |
+
+Validation: all fields are required and `price` must be a positive number (400 otherwise).
+
+### Sample POST body (Postman: Body -> raw -> JSON)
+
+```json
+{
+  "id": 4,
+  "vehicleName": "Maruti Swift",
+  "vehicleNumber": "DL8CAF5030",
+  "type": "Hatchback",
+  "price": 750000
+}
+```
+
+### Sample PUT body (`PUT /vehicles/1`)
+
+```json
+{
+  "vehicleName": "Hyundai Creta SX",
+  "vehicleNumber": "HR26AB1234",
+  "type": "SUV",
+  "price": 1650000
+}
+```
+
+## Screenshots
+
+Place the submission screenshots in `screenshots/`: HTTP server running, `/info`, and Postman GET / POST / PUT / DELETE.
