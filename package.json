@@ -1,0 +1,18 @@
+{
+  "name": "mt1-labexam",
+  "version": "1.0.0",
+  "description": "Vehicle Management Web Application - Node.js HTTP module and Express.js",
+  "main": "httpServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:http": "node httpServer.js",
+    "start:express": "node expressApp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
